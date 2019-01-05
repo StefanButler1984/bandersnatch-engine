@@ -44,7 +44,13 @@ decisions: nodeId,
 
 In the database the decision and the observation will be the same object: a node. The difference is whether or not a player can make a choice and go down a different path.
 
-The engine UI will
+The engine UI will allow users to upload images, set the text for the header and decisions, and there will be a drop down that allows the user to put an existing node as the nodeId. This will link the decisions and observations creating the network. This can be left null if that path hasnt been created yet. 
+
+1.5 GOALS
+
+Modify the above JSON objects allowing a list of nodeIds. In the engine designer allow the community to upvote/downvote their favorite nodes. 
+
+Allow players to play the Bandersnatch 1984 game. The game will be based on the nodes with the highest votes. This will be dynamic. If a new node is created or if the vote totals change it will automatically be reflected in the game. Players may be able to pick how they want to play the game by selecting most votes for all time, 6 months, 3 months, 1 month.
 
 License GPL 3. Any Derivative Work must be released under the GPL 3.0 and the following:
 
