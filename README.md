@@ -52,6 +52,14 @@ Modify the above JSON objects allowing a list of nodeIds. In the engine designer
 
 Allow players to play the Bandersnatch 1984 game. The game will be based on the nodes with the highest votes. This will be dynamic. If a new node is created or if the vote totals change it will automatically be reflected in the game. Players may be able to pick how they want to play the game by selecting most votes for all time, 6 months, 3 months, 1 month.
 
+2.0 GOALS
+
+In the Bandersnatch episode the player can navigate through a maze. Add a new node type with 4 decision points up,right,down,left.
+
+
+
+-----------
+
 License GPL 3. Any Derivative Work must be released under the GPL 3.0 and the following:
 
 THIS OR ANY DERIVATIVE WORK MAY NOT BE USED FOR COMMERCIAL PURPOSES. ANY DERIVATIVE WORK MUST ALSO CONTAIN THIS NON COMMERCIAL USE LICENSE REQUIREMENT.
