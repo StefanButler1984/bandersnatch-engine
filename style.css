@@ -7,6 +7,12 @@ background-color: black;
 
 }
 
+#zero{
+    margin-right:25px;
+}
+#one {
+margin-left:25px;
+}
 
 #background {
     width: 100%; 
