@@ -7,6 +7,10 @@ background-color: black;
 
 }
 
+#container{
+    width:100%;height:75%;margin:auto;overflow:hidden
+}
+
 #zero{
     margin-right:25px;
 }
