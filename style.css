@@ -23,7 +23,9 @@ margin-left:25px;
     z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
 }
 
-.stretch {
+.pic {
+    vertical-align: middle;
+    display: inline-block;
     width:100%;
 }
 
