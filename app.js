@@ -38,6 +38,8 @@ else if (topChild.score < child.score) topChild = topChild
   
   
 $('.stretch').attr('src', currentNode.images[0])
+  
+  $('#header').html(currentNode.header);
 });
 
 
