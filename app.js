@@ -5,7 +5,7 @@ var topChild = null;
 
 $.get( "https://www.reddit.com/r/Bandersnatch/comments/ad7cbr/bandersnatch_game_engine_test_1/search.json", function( data ) {
   window.data = data;
-  _.each(a[1].data.children, function(c){
+  _.each(data[1].data.children, function(c){
 
     try{
       var obj = JSON.parse(c.data.body);
