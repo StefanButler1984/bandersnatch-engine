@@ -55,10 +55,14 @@ $('.pic').attr('src', currentNode.images[0])
   
   $('#header').html(currentNode.header);
   
-
+      var desc = "";
+  if(typeof currentNode.decisions[0] == "string")
+    desc = currentNode.decisions[0];
+  else
+    desc = currentNode.decisions[0].description
     
-        $('#zero').html($("<a></a>").attr("onclick", "choice(0)").text(currentNode.decisions[0].description));
-        $('#one').html($("<a></a>").attr("onclick", "choice(1)").text(currentNode.decisions[1].description));
+        $('#zero').html($("<a></a>").attr("onclick", "choice(0)").text(desc));
+        $('#one').html($("<a></a>").attr("onclick", "choice(1)").text(desc));
 
     
   //  $('#zero').wrapInner('<a onclick="choice(0)">' + currentNode.decisions[0] + '</a>');
@@ -72,10 +76,16 @@ $('.pic').attr('src', currentNode.images[0])
 });
 
 function choice(c){
+  var goto = "";
+   if(typeof currentNode.decisions[0] == "string")
+    goto = currentNode.decisions[0];
+  else
+    goto = currentNode.decisions[0].goto
+  
   if(currentNode.nodeId.toLowerCase() == "error")
     location.href = "http://"+location.host + "/?universe=" + universe + "&node=" +getURLParam('p',location.search) ;
 else
-location.href = "http://"+location.host + "/?universe=" + universe + "&node=" + currentNode.decisions[c].goto + "&p=" + currentNode.nodeId;
+location.href = "http://"+location.host + "/?universe=" + universe + "&node=" + goto + "&p=" + currentNode.nodeId;
 
 }
 
