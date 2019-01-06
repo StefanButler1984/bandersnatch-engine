@@ -45,8 +45,7 @@ $('.pic').attr('src', currentNode.images[0])
   
   $('#header').html(currentNode.header);
   
-  if(currentNode.topChild != null)
-  {
+
     
         $('#zero').html($("<a></a>").attr("onclick", "choice(0)").text(currentNode.decisions[0]));
         $('#one').html($("<a></a>").attr("onclick", "choice(1)").text(currentNode.decisions[1]));
@@ -55,7 +54,7 @@ $('.pic').attr('src', currentNode.images[0])
   //  $('#zero').wrapInner('<a onclick="choice(0)">' + currentNode.decisions[0] + '</a>');
   //  $('#one').wrapInner('<a onclick="choice(1)">' + currentNode.decisions[1] + '</a>');
 
-  }
+  
   
 
 });
