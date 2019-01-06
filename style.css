@@ -1,4 +1,12 @@
 
 body {
-  background-color: lightblue;
+  background-image: url('https://i.kinja-img.com/gawker-media/image/upload/s--78YDr9B6--/c_scale,f_auto,fl_progressive,q_80,w_800/otz2frt6bqteyt4zfnmj.png');
+
+/* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
