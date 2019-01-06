@@ -4,6 +4,16 @@ background-color: black;
     font-size: 3rem;
     text-align: center;
     font-family: fantasy;
+    
+    a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: white; /*color of your choosing*/
+    text-decoration: none;
+    font-weight: normal;
+}
 
 }
 
