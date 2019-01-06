@@ -20,7 +20,7 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
     });
   
   if(currentNode == null){
-    currentNode = _.find(nodes, function(node){return node.nodeId == 'root'})
+    currentNode = _.find(nodes, function(node){return node.nodeId == 'error'})
   }
   else{
     currentNode = decodeURI(currentNode);
