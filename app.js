@@ -27,7 +27,7 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
     currentNode = _.find(nodes, function(node){return node.nodeId.toLowerCase() == currentNode.toLowerCase()});
   }
   
-  if(currentNode == null){
+  if(currentNode == null || typeof currentNode === 'undefined'){
     currentNode = _.find(nodes, function(node){return node.nodeId == 'error'})
   }
   
