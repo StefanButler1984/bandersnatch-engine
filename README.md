@@ -1,7 +1,8 @@
 # bandersnatch-engine
 Create your own adventure game
 
-https://i.imgur.com/Nh8cTSr.png
+![alt text](https://i.imgur.com/Nh8cTSr.png)
+
 
 This repo will be used to design and create the Bandersnatch game engine which will allow the bandersntach community to collectivly create the Bandersnatch 1984 game.
 
