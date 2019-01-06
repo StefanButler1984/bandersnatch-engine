@@ -41,7 +41,7 @@ else if (currentNode.topChild.score < child.score) currentNode.topChild = child
     });
   
   
-$('.stretch').attr('src', currentNode.images[0])
+$('.pic').attr('src', currentNode.images[0])
   
   $('#header').html(currentNode.header);
   
