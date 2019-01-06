@@ -58,7 +58,7 @@ $('.stretch').attr('src', currentNode.images[0])
 });
 
 function choice(c){
-location.href = location.host + "/?universe=" + universe + "&node=" + currentNode.decisions[c]
+location.href = "http"+location.host + "/?universe=" + universe + "&node=" + currentNode.decisions[c]
 
 }
 
