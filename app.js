@@ -45,8 +45,8 @@ $('.stretch').attr('src', currentNode.images[0])
   if(currentNode.topChild != null)
   {
     
-    $('#zero').html('<a onclick="choice(0)">' + currentNode.decisions[0] + '</a>');
-    $('#one').html('<a onclick="choice(1)">' + currentNode.decisions[1] + '</a>');
+    $('#zero').wrapInner('<a onclick="choice(0)">' + currentNode.decisions[0] + '</a>');
+    $('#one').wrapInner('<a onclick="choice(1)">' + currentNode.decisions[1] + '</a>');
 
   }
   
