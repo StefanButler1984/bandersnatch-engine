@@ -62,7 +62,10 @@ In the Bandersnatch episode the player can navigate through a maze. Add a new no
 
 
 -----------
-
-License GPL 3. Any Derivative Work must be released under the GPL 3.0 and the following:
+License
 
 THIS OR ANY DERIVATIVE WORK MAY NOT BE USED FOR COMMERCIAL PURPOSES. ANY DERIVATIVE WORK MUST ALSO CONTAIN THIS NON COMMERCIAL USE LICENSE REQUIREMENT.
+
+Besides this restriction this code may be copied and edited and otherwise conforms to the GPL 3 license.  The restriction that this code not be used for commercial purposes superceeds the GPL 3 license. The sections where the GPL 3 license gives rights to use this code for commerical purposes are void.
+
+
