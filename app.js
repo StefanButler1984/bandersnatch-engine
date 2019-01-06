@@ -22,7 +22,7 @@ child=child.data;
     try{
         if(topChild==null) topChild = child;
 else if (topChild.score < child.score) topChild = topChild
-      topChild = JSON.parse(topChild.data.body)
+      topChild = JSON.parse(topChild.body)
 
     } catch(ex){}
     });
