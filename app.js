@@ -2,8 +2,10 @@
 var nodes = [];
 var root = null;
 var topChild = null;
+var universe = getURLParam('universe',location.search)
+var currentNode = getURLParam('node',location.search)
 
-$.get( "https://www.reddit.com/r/Bandersnatch/comments/ad7cbr/bandersnatch_game_engine_test_1/search.json", function( data ) {
+$.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", function( data ) {
   window.data = data;
   _.each(data[1].data.children, function(c){
 
@@ -14,7 +16,10 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/ad7cbr/bandersnatch_game_
     } catch(ex){}
     });
   
-  root = _.find(nodes, function(node){return node.nodeId == 'root'})
+  if(currentNode == null)
+    currentNode = _.find(nodes, function(node){return node.nodeId == 'root'})
+  else
+    currentNode = _.find(nodes, function(node){return node.nodeId.toLowerCase() == currentNode.toLowerCase()})
   
   
   _.each(root.replies, function(child){
@@ -30,3 +35,29 @@ else if (topChild.score < child.score) topChild = topChild
   
 
 });
+
+
+
+function getURLParam(key,target){
+    var values = [];
+    if (!target) target = location.href;
+
+    key = key.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+
+    var pattern = key + '=([^&#]+)';
+    var o_reg = new RegExp(pattern,'ig');
+    while (true){
+        var matches = o_reg.exec(target);
+        if (matches && matches[1]){
+            values.push(matches[1]);
+        } else {
+            break;
+        }
+    }
+
+    if (!values.length){
+        return null;   
+    } else {
+        return values.length == 1 ? values[0] : values;
+    }
+}
