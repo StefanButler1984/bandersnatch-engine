@@ -34,7 +34,7 @@ else if (topChild.score < child.score) topChild = topChild
     });
   
   
-
+$('.stretch').attr('src', topChild.images[0])
 });
 
 
