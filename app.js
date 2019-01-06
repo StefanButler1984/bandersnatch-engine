@@ -45,8 +45,12 @@ $('.stretch').attr('src', currentNode.images[0])
   if(currentNode.topChild != null)
   {
     
-    $('#zero').wrapInner('<a onclick="choice(0)">' + currentNode.decisions[0] + '</a>');
-    $('#one').wrapInner('<a onclick="choice(1)">' + currentNode.decisions[1] + '</a>');
+        $('#zero').html($("<a></a>").attr("onclick", "choice(0)").text(currentNode.decisions[0]));
+        $('#one').html($("<a></a>").attr("onclick", "choice(1)").text(currentNode.decisions[1]));
+
+    
+  //  $('#zero').wrapInner('<a onclick="choice(0)">' + currentNode.decisions[0] + '</a>');
+  //  $('#one').wrapInner('<a onclick="choice(1)">' + currentNode.decisions[1] + '</a>');
 
   }
   
