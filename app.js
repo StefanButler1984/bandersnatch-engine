@@ -53,7 +53,10 @@ $('.stretch').attr('src', currentNode.images[0])
 
 });
 
+function choice(c){
+location.href = location.host + "/?universe=" + universe + "&node=" currentNode.decisions[c]
 
+}
 
 function getURLParam(key,target){
     var values = [];
