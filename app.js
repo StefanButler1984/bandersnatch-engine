@@ -57,8 +57,8 @@ $('.pic').attr('src', currentNode.images[0])
   
 
     
-        $('#zero').html($("<a></a>").attr("onclick", "choice(0)").text(currentNode.decisions[0]));
-        $('#one').html($("<a></a>").attr("onclick", "choice(1)").text(currentNode.decisions[1]));
+        $('#zero').html($("<a></a>").attr("onclick", "choice(0)").text(currentNode.decisions[0].description));
+        $('#one').html($("<a></a>").attr("onclick", "choice(1)").text(currentNode.decisions[1].description));
 
     
   //  $('#zero').wrapInner('<a onclick="choice(0)">' + currentNode.decisions[0] + '</a>');
@@ -75,7 +75,7 @@ function choice(c){
   if(currentNode.nodeId.toLowerCase() == "error")
     location.href = "http://"+location.host + "/?universe=" + universe + "&node=" +getURLParam('p',location.search) ;
 else
-location.href = "http://"+location.host + "/?universe=" + universe + "&node=" + currentNode.decisions[c] + "&p=" + currentNode.nodeId;
+location.href = "http://"+location.host + "/?universe=" + universe + "&node=" + currentNode.decisions[c].goto + "&p=" + currentNode.nodeId;
 
 }
 
