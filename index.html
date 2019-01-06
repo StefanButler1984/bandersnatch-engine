@@ -8,7 +8,7 @@
     $.get( "https://www.reddit.com/r/Bandersnatch/comments/acw66s/bandersnatch_adventure_game_engine/search.json", function( data ) {
   $( ".result" ).html( JSON.stringify(data) );
       
-      JSON.parse(data[1].data.children[0].data.body.replace(/"images.*\],/s, ""))
+      JSON.parse(a[1].data.children[0].data.body)
 
 });
 
