@@ -55,14 +55,21 @@ $('.pic').attr('src', currentNode.images[0])
   
   $('#header').html(currentNode.header);
   
-      var desc = "";
+      var desc0 = "";
   if(typeof currentNode.decisions[0] == "string")
-    desc = currentNode.decisions[0];
+    desc0 = currentNode.decisions[0];
   else
-    desc = currentNode.decisions[0].description
+    desc0 = currentNode.decisions[0].description
+  
+        var desc1 = "";
+
+  if(typeof currentNode.decisions[1] == "string")
+    desc1 = currentNode.decisions[1];
+  else
+    desc1 = currentNode.decisions[1].description
     
-        $('#zero').html($("<a></a>").attr("onclick", "choice(0)").text(desc));
-        $('#one').html($("<a></a>").attr("onclick", "choice(1)").text(desc));
+        $('#zero').html($("<a></a>").attr("onclick", "choice(0)").text(desc0));
+        $('#one').html($("<a></a>").attr("onclick", "choice(1)").text(desc1));
 
     
   //  $('#zero').wrapInner('<a onclick="choice(0)">' + currentNode.decisions[0] + '</a>');
@@ -77,10 +84,10 @@ $('.pic').attr('src', currentNode.images[0])
 
 function choice(c){
   var goto = "";
-   if(typeof currentNode.decisions[0] == "string")
-    goto = currentNode.decisions[0];
+   if(typeof currentNode.decisions[c] == "string")
+    goto = currentNode.decisions[c];
   else
-    goto = currentNode.decisions[0].goto
+    goto = currentNode.decisions[c].goto
   
   if(currentNode.nodeId.toLowerCase() == "error")
     location.href = "http://"+location.host + "/?universe=" + universe + "&node=" +getURLParam('p',location.search) ;
