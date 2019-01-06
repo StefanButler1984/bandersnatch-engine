@@ -17,8 +17,8 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/ad7cbr/bandersnatch_game_
   root = _.find(nodes, function(node){return node.nodeId == 'root'})
   
   
-  _.each(root.replies, function(c){
-
+  _.each(root.replies, function(child){
+child=child.data;
     try{
         if(topChild==null) topChild = child;
 else if (topChild.score < child.score) topChild = topChild
