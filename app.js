@@ -11,7 +11,8 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
 
     try{
       var obj = JSON.parse(c.data.body);
-      obj.replies = c.data.replies.data.children;
+      if(typeof c.data.replies.data !== 'undefined')
+        obj.replies = c.data.replies.data.children;
     nodes.push(obj);
     } catch(ex){}
     });
