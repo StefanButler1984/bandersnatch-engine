@@ -1,13 +1,4 @@
-    a,
-a:link,
-a:visited,
-a:hover,
-a:active {
-    color: white; /*color of your choosing*/
-    text-decoration: none;
-    font-weight: normal;
-    cursor:default;
-}
+
 
 
 html{
