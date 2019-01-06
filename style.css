@@ -1,6 +1,6 @@
 
 body {
-  background: url('https://i.kinja-img.com/gawker-media/image/upload/s--78YDr9B6--/c_scale,f_auto,fl_progressive,q_80,w_800/otz2frt6bqteyt4zfnmj.png')  no-repeat center center fixed;
+  background-image: url('https://i.kinja-img.com/gawker-media/image/upload/s--78YDr9B6--/c_scale,f_auto,fl_progressive,q_80,w_800/otz2frt6bqteyt4zfnmj.png');
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
