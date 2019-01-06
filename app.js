@@ -5,7 +5,7 @@ var topChild = null;
 var universe = getURLParam('universe',location.search)
 var currentNode = getURLParam('node',location.search)
 
-if(typeof universe === 'undefined')
+if(universe == null)
   universe = 'ad7cbr'
 
 $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", function( data ) {
