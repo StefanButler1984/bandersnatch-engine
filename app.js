@@ -69,7 +69,7 @@ function choice(c){
   if(currentNode.nodeId.toLowerCase() == "error")
     location.href = "http://"+location.host + "/?universe=" + universe + "&node=" +getURLParam('p',location.search) ;
 else
-location.href = "http://"+location.host + "/?universe=" + universe + "&node=" + currentNode.decisions[c] + "p=" + currentNode.nodeId;
+location.href = "http://"+location.host + "/?universe=" + universe + "&node=" + currentNode.decisions[c] + "&p=" + currentNode.nodeId;
 
 }
 
