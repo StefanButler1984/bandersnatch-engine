@@ -1,7 +1,6 @@
 
 var nodes = [];
 var root = null;
-var topChild = null;
 var universe = getURLParam('universe',location.search)
 var currentNode = getURLParam('node',location.search)
 
@@ -25,13 +24,15 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
   else
     currentNode = _.find(nodes, function(node){return node.nodeId.toLowerCase() == currentNode.toLowerCase()})
   
+  currentNode.topChild = null;
   
   _.each(currentNode.replies, function(child){
 child=child.data;
     try{
-        if(topChild==null) topChild = child;
-else if (topChild.score < child.score) topChild = topChild
-      topChild = JSON.parse(topChild.body)
+        if(currentNode.topChild==null) currentNode.topChild = child;
+else if (currentNode.topChild.score < child.score) currentNode.topChild = topChild
+      
+      currentNode.topChild = JSON.parse(topChild.body)
 
     } catch(ex){}
     });
@@ -40,6 +41,15 @@ else if (topChild.score < child.score) topChild = topChild
 $('.stretch').attr('src', currentNode.images[0])
   
   $('#header').html(currentNode.header);
+  
+  if(currentNode.topChild != null)
+  {
+    $('#zero').html(currentNode.topChild.zero);
+        $('#one').html(currentNode.topChild.one);
+
+  }
+  
+
 });
 
 
