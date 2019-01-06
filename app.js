@@ -44,8 +44,9 @@ $('.stretch').attr('src', currentNode.images[0])
   
   if(currentNode.topChild != null)
   {
-    $('#zero').html(currentNode.topChild.zero);
-        $('#one').html(currentNode.topChild.one);
+    
+    $('#zero').html('<a href="choice(0)">' + currentNode.topChild[0] + '</a>');
+    $('#one').html('<a href="choice(1)">' + currentNode.topChild[1] + '</a>');
 
   }
   
