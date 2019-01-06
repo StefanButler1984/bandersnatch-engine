@@ -19,6 +19,8 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
     } catch(ex){}
     });
   
+  currentNodeId = currentNode;
+  
   if(currentNode == null){
     currentNode = _.find(nodes, function(node){return node.nodeId == 'root'})
   }
@@ -30,7 +32,7 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
   if(currentNode == null || typeof currentNode === 'undefined'){
     currentNode = _.find(nodes, function(node){return node.nodeId == 'error'})
   }
-  
+  currentNode.nodeId = currentNodeId;
   currentNode.topChild = null;
   
   _.each(currentNode.replies, function(child){
@@ -64,7 +66,10 @@ $('.pic').attr('src', currentNode.images[0])
 });
 
 function choice(c){
-location.href = "http://"+location.host + "/?universe=" + universe + "&node=" + currentNode.decisions[c]
+  if(currentNode.nodeId.toLowerCase() == "error")
+    location.href = "http://"+location.host + "/?universe=" + universe + "&node=" +getURLParam('p',location.search) ;
+else
+location.href = "http://"+location.host + "/?universe=" + universe + "&node=" + currentNode.decisions[c] + "p=" + currentNode.nodeId;
 
 }
 
