@@ -65,7 +65,7 @@ $('.pic').attr('src', currentNode.images[0])
   //  $('#one').wrapInner('<a onclick="choice(1)">' + currentNode.decisions[1] + '</a>');
 
   
-  
+  $('#background').show();
 
 });
 
