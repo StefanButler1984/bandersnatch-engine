@@ -22,7 +22,7 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
     currentNode = _.find(nodes, function(node){return node.nodeId.toLowerCase() == currentNode.toLowerCase()})
   
   
-  _.each(root.replies, function(child){
+  _.each(currentNode.replies, function(child){
 child=child.data;
     try{
         if(topChild==null) topChild = child;
