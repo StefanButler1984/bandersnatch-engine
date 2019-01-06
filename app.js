@@ -20,11 +20,15 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
     });
   
   if(currentNode == null){
-    currentNode = _.find(nodes, function(node){return node.nodeId == 'error'})
+    currentNode = _.find(nodes, function(node){return node.nodeId == 'root'})
   }
   else{
     currentNode = decodeURI(currentNode);
     currentNode = _.find(nodes, function(node){return node.nodeId.toLowerCase() == currentNode.toLowerCase()});
+  }
+  
+  if(currentNode == null){
+    currentNode = _.find(nodes, function(node){return node.nodeId == 'error'})
   }
   
   currentNode.topChild = null;
