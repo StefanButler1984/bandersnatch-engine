@@ -30,9 +30,9 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
 child=child.data;
     try{
         if(currentNode.topChild==null) currentNode.topChild = child;
-else if (currentNode.topChild.score < child.score) currentNode.topChild = topChild
+else if (currentNode.topChild.score < child.score) currentNode.topChild = child
       
-      currentNode.topChild = JSON.parse(topChild.body)
+      currentNode.topChild = JSON.parse(currentNode.topChild.body)
 
     } catch(ex){}
     });
