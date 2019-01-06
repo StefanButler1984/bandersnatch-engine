@@ -1,6 +1,15 @@
 <html>
-<head></head>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $.get( "https://www.reddit.com/r/Bandersnatch/comments/acw66s/bandersnatch_adventure_game_engine/search.json", function( data ) {
+  $( ".result" ).html( data );
+});
+
+  </script>
+  </head>
 <body>
 pax
+  <code class="result"></code>
 </body>
 </html>
