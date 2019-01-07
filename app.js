@@ -96,7 +96,7 @@ function choice(c){
   else
     goto = currentNode.decisions[c].goto
   
-  if(currentNode.nodeId.toLowerCase() == "error" || currentNode.nodeId.toLowerCase() == "go back")
+  if(currentNode.nodeId.toLowerCase() == "error" || goto.toLowerCase() == "go back")
     location.href = "http://"+location.host + "/?universe=" + universe + "&node=" +getURLParam('p',location.search) ;
 else
 location.href = "http://"+location.host + "/?universe=" + universe + "&node=" + goto + "&p=" + currentNode.nodeId;
