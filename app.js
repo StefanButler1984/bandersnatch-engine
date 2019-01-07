@@ -40,6 +40,7 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
   
   currentNode.topChild = null;
   
+  /*
   _.each(currentNode.replies, function(child){
 child=child.data;
     try{
@@ -51,7 +52,7 @@ else if (currentNode.topChild.score < child.score) currentNode.topChild = child
     } catch(ex){}
     });
   
-  
+  */
 $('.pic').attr('src', currentNode.images[0])
   
   $('#header').html(currentNode.header);
