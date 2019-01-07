@@ -12,6 +12,7 @@ $.get( "https://www.reddit.com/r/Bandersnatch/comments/" + universe +".json", fu
   _.each(data[1].data.children, function(c){
 
     try{
+      c.data.body.replaceAll('&amp;#x200B;','')
       var obj = JSON.parse(c.data.body);
       if(typeof c.data.replies.data !== 'undefined')
         obj.replies = c.data.replies.data.children;
@@ -81,6 +82,11 @@ $('.pic').attr('src', currentNode.images[0])
   },200)
 
 });
+
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+};
 
 function choice(c){
   var goto = "";
